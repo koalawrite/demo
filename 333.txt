@@ -1,0 +1,23 @@
+接口文档:
+请求方式： POST（HTTP ）
+请求地址：https://litemall.hogwarts.ceshiren.com/admin/auth/login
+参数说明：
+参数	是否必填	说明
+username	是	用户名，默认hogwarts
+password	是	密码，默认密码test12345 
+返回结果：
+{
+    "errno":0,
+    "data":{
+        "adminInfo":{
+            "nickName":"admin123",
+            "avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif"
+        },
+        "token":"830cd329-befb-4ec5-9960-626197abaa9a"
+    },
+    "errmsg":"成功"
+}
+备注：X-Litemall-Admin-Token 使用方法：在每个业务接口的headers中添加token键值对，键为“X-Litemall-Admin-Token”，值为具体的token值。
+字段	值	备注
+X-Litemall-Admin-Token	随机文本，例如“7172bbc7-f81a-4a78-9220-e55e3cfdf98c”	通过登录接口获取
+使用python语言写一个自动化脚本对该接口进行测试
